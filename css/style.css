@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cutive Mono', monospace;
+}
+
+body {
+    background-color: #1d2021;
+}
+
+.container {
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.container p {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.container input {
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 100%;
+    height: 50px;
+}
+
+ .container button{
+    outline: 0;
+    margin: 15px 0;
+    height: 50px;
+    width: 100%;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    background-color: blueviolet;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 200ms;
+}
+button:hover{
+    background-color: rgb(117, 0, 234)
+}
+
+#qrCode{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#qrCode img{
+    width: 100%;
+    padding: 20px;
+}
+
+#qrCode.show-img{
+    max-height: 300px;
+   border: 1px solid #d1d1d1;
+    margin: 10px auto;
+}
+
+.error{
+    animation: shake 0.1s linear  10;
+
+}
+
+/* button */
+
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-85:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+@keyframes shake {
+
+    0%{
+        transform: translateX(0);
+    }
+     25%{
+        transform: translateX(2px);
+    }
+     50%{
+        transform: translateX(0);
+    }
+     75%{
+        transform: translateX(-2px);
+    }
+     100%{
+        transform: translateX(0);
+    }
+    
+}
